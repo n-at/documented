@@ -1,0 +1,9 @@
+{
+  "log_level": "debug",
+
+  "docs": "./docs",
+  "img": "./img",
+  "output": "./site",
+
+  "server_port": "4000"
+}
