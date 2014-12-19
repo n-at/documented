@@ -1,1 +1,32 @@
-/*TODO need some styles here*/
+
+/* Header */
+/****************************************************************/
+.documented-header {
+    padding: 10px 25px;
+}
+
+.documented-header h1 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+/* Body */
+/****************************************************************/
+.documented-body {
+
+}
+
+.documented-content {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/* Footer */
+/****************************************************************/
+.documented-footer {
+    padding: 10px 25px;
+}
+
+.documented-copyright p {
+    text-align: right;
+}

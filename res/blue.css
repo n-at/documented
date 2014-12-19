@@ -1,1 +1,44 @@
-/*TODO theme styles will be here */
+
+body {
+    background-color: #3F4657;
+}
+
+/* Header */
+/****************************************************************/
+.documented-header {
+    border-bottom-color: #2D2D2D;
+    background-color: #3F4657;
+    color: #82BECD;
+}
+
+/* Body */
+/****************************************************************/
+.documented-body {
+    background-color: #82BECD;
+}
+
+.documented-menu {
+    background-color: #F7F7F7;
+    border-left-color: #E7E7E9;
+}
+
+.documented-content {
+    background-color: #FFFFFF;
+}
+
+/* Footer */
+/****************************************************************/
+.documented-footer {
+    border-top-color: #2D2D2D;
+    background-color: #3F4657;
+    color: #82BECD;
+}
+
+.documented-footer a {
+    text-decoration: underline;
+    color: #82BECD;
+}
+
+.documented-footer a:hover {
+    color: #a1ddec;
+}

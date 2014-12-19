@@ -1,7 +1,12 @@
 {
-  "name": "documented",
+  "title": "documented",
   "theme": "blue",
   "highlight": {
     "style": "github"
+  },
+  "copyright": "documented is licensed under BSD",
+  "links": {
+    "Github": "http://github.com/n-at/documented",
+    "twitter": "http://twitter.com/atnurgaliev"
   }
 }
