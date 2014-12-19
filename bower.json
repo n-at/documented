@@ -5,7 +5,6 @@
   "dependencies": {
     "bootstrap": "~3.3.1",
     "jquery": "1.11.1",
-    "flat-ui": "~2.2.2",
     "modernizr": "~2.8.3"
   }
 }

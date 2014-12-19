@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/n-at/documented",
   "dependencies": {
-    "async": "0.9.*",
     "express": "4.10.*",
     "fs-extra": "^0.13.0",
     "marked": "0.3.*",
