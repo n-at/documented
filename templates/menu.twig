@@ -1,1 +1,29 @@
-{# TODO here will be the menu #}
+{% macro buildMenu(menu) %}
+    <div class="documented-sub-menu">
+        {% for submenu in menu.submenus %}
+            <div class="sub-menu menu-item">
+                <span class="glyphicon glyphicon-chevron-right menu-marker"></span>
+
+                {% if submenu.hasIndex %}
+                    <a href="{{ submenu.path }}">{{ submenu.title }}</a>
+                {% else %}
+                    <span>{{ submenu.title }}</span>
+                {% endif %}
+
+                {{ buildMenu(submenu) }}
+            </div>
+        {% endfor %}
+
+        {% for item in menu.items %}
+            <div class="menu-item" data-type="menu-item" data-id="{{ item.id }}">
+                <a href="{{ item.path }}">{{ item.title }}</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endmacro %}
+
+{{ buildMenu(menu) }}
+
+<script>
+    var currentDocumentId = "{{ document.id }}";
+</script>

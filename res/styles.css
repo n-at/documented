@@ -13,7 +13,7 @@
 /* Body */
 /****************************************************************/
 .documented-body {
-
+    margin-left: -15px;
 }
 
 .documented-content {
@@ -31,6 +31,25 @@
 
 .documented-header-line {
     margin-top: 0;
+}
+
+/* Menu */
+.documented-menu {
+    padding-bottom: 5px;
+}
+
+.documented-sub-menu {
+    margin-left: 13px;
+}
+
+.documented-sub-menu .menu-marker {
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.documented-sub-menu .menu-item {
+    padding-top: 5px;
 }
 
 /* Footer */

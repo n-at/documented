@@ -11,15 +11,18 @@ body {
     color: #82BECD;
 }
 
+.documented-header a {
+    color: #82BECD;
+}
+
+.documented-header a:hover {
+    color: #a1ddec;
+}
+
 /* Body */
 /****************************************************************/
 .documented-body {
     background-color: #82BECD;
-}
-
-.documented-menu {
-    background-color: #F7F7F7;
-    border-left-color: #E7E7E9;
 }
 
 .documented-content {
@@ -39,6 +42,16 @@ body {
 .documented-date {
     color: #999;
     font-style: italic;
+}
+
+/* Menu */
+.documented-menu {
+    background-color: #F7F7F7;
+    border-left-color: #E7E7E9;
+}
+
+.documented-sub-menu .sub-menu {
+    color: #82BECD;
 }
 
 /* Footer */
