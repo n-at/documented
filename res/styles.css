@@ -42,6 +42,10 @@
     margin-left: 13px;
 }
 
+.documented-menu-wrapper {
+    display: none;
+}
+
 .documented-sub-menu .menu-marker {
     font-size: 12px;
     font-weight: bold;
