@@ -17,8 +17,20 @@
 }
 
 .documented-content {
-    padding-top: 25px;
+    padding-top: 10px;
     padding-bottom: 25px;
+}
+
+.documented-page-header {
+    margin-top: 10px;
+}
+
+.documented-author, .documented-date {
+    font-size: 12px;
+}
+
+.documented-header-line {
+    margin-top: 0;
 }
 
 /* Footer */

@@ -26,6 +26,21 @@ body {
     background-color: #FFFFFF;
 }
 
+.documented-page-header {
+    color: #82BECD;
+}
+
+.documented-author {
+    color: #999;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.documented-date {
+    color: #999;
+    font-style: italic;
+}
+
 /* Footer */
 /****************************************************************/
 .documented-footer {
