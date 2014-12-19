@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="/res/bootstrap/dist/bootstrap.min.css">
+    <link rel="stylesheet" href="/res/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/res/highlight.js/src/styles/{{ config.highlight.style }}.css">
     <link rel="stylesheet" href="/res/documented/styles.css">
-    <link rel="stylesheet" href="/res/documented/blue.css"> {#TODO get theme name from config#}
+    <link rel="stylesheet" href="/res/documented/{{ config.theme }}.css">
 
     <script src="/res/modernizr/modernizr.js"></script>
     <script src="/res/jquery/dist/jquery.min.js"></script>
     <script src="/res/documented/ui.js"></script>
 
-    <title></title>
+    <title>{{ document.meta.title }} - {{ config.name }}</title>
 </head>
 <body>
+
+{{ document.content | raw }}
 
 </body>
 </html>

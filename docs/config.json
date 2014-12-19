@@ -1,3 +1,7 @@
 {
-
+  "name": "documented",
+  "theme": "blue",
+  "highlight": {
+    "style": "github"
+  }
 }
