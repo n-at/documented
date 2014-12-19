@@ -27,6 +27,7 @@
     "marked": "0.3.*",
     "mkdirp": "0.5.0",
     "nconf": "0.7.*",
+    "node-uuid": "1.4.*",
     "swig": "1.4.*",
     "winston": "0.8.*"
   }
