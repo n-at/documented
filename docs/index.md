@@ -1,22 +1,13 @@
 author: Alexey Nurgaliev
 date: 17.12.2014 22:58
-title: documented
+title: documented examples
 ---
 
-_Simple documentation generator_
+This is an example *documented* documentation directory and file structure.
+ 
+## License
 
-##Installation
-
-Clone this repository and run in shell:
-
-    $ npm install
-    $ bower install
-
-##Usage
-
-##License
-
-Copyright (c) 2014, Alexey Nurgaliev All rights reserved.
+Copyright (c) 2014, Alexey Nurgaliev. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the 
 following conditions are met:
