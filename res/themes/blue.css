@@ -54,12 +54,15 @@ pre {
     border-left-color: #E7E7E9;
 }
 
-.documented-sub-menu .sub-menu-title {
-    color: #82BECD;
+.documented-sub-menu .sub-menu-title a,
+.documented-sub-menu .menu-item a {
+    color: #888;
 }
 
-.documented-sub-menu .menu-item-current {
+.documented-sub-menu .menu-item-current,
+.documented-sub-menu .menu-item-current a{
     font-weight: bold;
+    color: #82BECD;
 }
 
 /* Footer */
