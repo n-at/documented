@@ -47,6 +47,10 @@
     display: none;
 }
 
+.documented-sub-menu .sub-menu-title {
+    font-size: 16px;
+}
+
 .documented-sub-menu .menu-marker {
     font-size: 12px;
     font-weight: bold;

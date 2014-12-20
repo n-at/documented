@@ -1,15 +1,15 @@
 {% macro buildMenu(menu) %}
     <div class="documented-sub-menu">
         {% for submenu in menu.submenus %}
-            <div class="sub-menu menu-item">
-                <span class="glyphicon glyphicon-chevron-right menu-marker"></span>
-
-                {% if submenu.hasIndex %}
-                    <a href="{{ submenu.path }}">{{ submenu.title }}</a>
-                {% else %}
-                    <span>{{ submenu.title }}</span>
-                {% endif %}
-
+            <div class="sub-menu">
+                <div class="sub-menu-title">
+                    <span class="glyphicon glyphicon-chevron-down menu-marker"></span>
+                    {% if submenu.hasIndex %}
+                        <a href="{{ submenu.path }}">{{ submenu.title }}</a>
+                    {% else %}
+                        <span>{{ submenu.title }}</span>
+                    {% endif %}
+                </div>
                 {{ buildMenu(submenu) }}
             </div>
         {% endfor %}
