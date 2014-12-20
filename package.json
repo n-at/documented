@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/n-at/documented",
   "dependencies": {
+    "deepcopy": "0.3.*",
     "express": "4.10.*",
     "fs-extra": "0.13.*",
     "highlight.js": "8.4.*",

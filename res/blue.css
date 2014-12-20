@@ -58,6 +58,10 @@ pre {
     color: #82BECD;
 }
 
+.documented-sub-menu .menu-item-current {
+    font-weight: bold;
+}
+
 /* Footer */
 /****************************************************************/
 .documented-footer {

@@ -40,7 +40,7 @@
 }
 
 .documented-sub-menu {
-    margin-left: 13px;
+    padding-left: 13px;
 }
 
 .documented-menu-wrapper {
@@ -55,10 +55,6 @@
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
-}
-
-.documented-sub-menu .menu-item {
-    padding-top: 5px;
 }
 
 /* Footer */

@@ -19,22 +19,27 @@ function setupMenu() {
     var $subMenuMarkers = $subMenuTitles.find('span.menu-marker');
 
     //hide sub menus
-    $subMenuMarkers.each(function(index, element) {
-        toggleIcon(element);
-        element.parent().siblings('.documented-sub-menu').hide();
+    $subMenuMarkers.each(function() {
+        var $this = $(this);
+        toggleIcon($this);
+        $this.parent().siblings('.documented-sub-menu').hide();
     });
+
+    //show current menu items
+    $('.documented-sub-menu .sub-menu-title.menu-item-current')
+        .children('.menu-marker')
+        .each(function() {
+            var $this = $(this);
+            toggleIcon($this);
+            $this.parent().siblings('.documented-sub-menu').show();
+        });
 
     //marker click handler
     $subMenuMarkers.click(function() {
         var $this = $(this);
         toggleIcon($this);
-
-        var $subMenu = $this.parent().siblings('.documented-sub-menu');
-        $subMenu.slideToggle();
+        $this.parent().siblings('.documented-sub-menu').slideToggle();
     });
-
-    //show current menu item
-    //TODO
 
     $menuWrapper.show();
 }
