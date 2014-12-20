@@ -1,4 +1,4 @@
-title: Github flavored markdown syntax extension
+title: GitHub flavored markdown syntax extension
 alias: github flavored
 ---
 
