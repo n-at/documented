@@ -46,8 +46,8 @@ format. Metadata will define document attributes:
 
 Index file metadata define directory attributes:
  
-* `title`: directory name
-* `alias`: directory name in the URL (directory name by default)
+* `title`: directory name in the menu
+* `alias`: directory name in the URL (file system directory name by default)
 * `has_index`: when equals to `false`, index.html page will not be generated
   
 Metadata section ends with line containing `---`.
@@ -56,7 +56,7 @@ Documentation configuration is stored in the `config.json` file inside of docume
 can define:
  
 * `title`: entire documentation title
-* `theme`: documentation visual theme name (css file name without eztension from `/res/themes`)
+* `theme`: documentation visual theme name (css file name without extension from `/res/themes`)
 * `highlight`.`style`: source code highlight style name (css file name without extension from 
   `/components/highlight.js/src/styles/`)
 * `links`: custom links to include in the bottom bar
