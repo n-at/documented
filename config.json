@@ -2,7 +2,7 @@
   "log_level": "debug",
 
   "docs": "./docs",
-  "img": "./img",
+  "img": "./docs/img",
   "output": "./site",
 
   "server_port": "4000",

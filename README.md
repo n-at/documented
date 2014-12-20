@@ -1,7 +1,7 @@
 documented
 ----------
 
-_Simple documentation generator_
+_Simple documentation generator inspired by [daux.io](http://daux.io) and [jekyll](http://jekyllrb.com)._
 
 ##Installation
 
