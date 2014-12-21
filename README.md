@@ -5,7 +5,7 @@ _Simple documentation generator inspired by [daux.io](http://daux.io) and [jekyl
 
 ## Installation
 
-Install [node.js](http://nodejs.org) first. 
+Install [node.js](http://nodejs.org) first. Also you need [bower](http://bower.io/).
 
 Clone this repository and run in shell:
 
@@ -43,6 +43,14 @@ format. Metadata will define document attributes:
 * `alias`: document name in the URL (file name by default)
 * `author`: document author (can be omitted)
 * `date`: document date of creation or modification (can be omitted)
+
+Document metadata example:
+
+    title: Example page
+    alias: example_page_alias
+    date: 21.12.2014
+    author: John Doe
+    ---
 
 Index file metadata define directory attributes:
  
