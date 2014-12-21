@@ -66,3 +66,10 @@
 .documented-copyright p {
     text-align: right;
 }
+
+/* Bootstrap fix */
+/****************************************************************/
+
+.img-responsive {
+    display: inline;
+}

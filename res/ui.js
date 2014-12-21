@@ -1,11 +1,16 @@
 
 $(function() {
     styleTables();
+    responsiveImages();
     setupMenu();
 });
 
 function styleTables() {
     $('.documented-content table').addClass('table');
+}
+
+function responsiveImages() {
+    $('.documented-content img').addClass('img-responsive');
 }
 
 function setupMenu() {

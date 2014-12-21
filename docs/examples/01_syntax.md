@@ -42,6 +42,8 @@ Ordered
 
 ![documented preview](/img/img1.png)
 
+Also here are inline ![inline image](/img/img2.png) images.
+
 ## Links
 
 http://github.com
