@@ -13,7 +13,7 @@ function setupMenu() {
     var $subMenuTitles = $menuWrapper.find('.sub-menu-title');
 
     var toggleIcon = function(marker) {
-        marker.toggleClass('glyphicon-chevron-right glyphicon-chevron-down')
+        marker.toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
     };
 
     var $subMenuMarkers = $subMenuTitles.find('span.menu-marker');
