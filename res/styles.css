@@ -37,6 +37,7 @@
 /* Menu */
 .documented-menu {
     padding-bottom: 5px;
+    border-right: 1px solid;
 }
 
 .documented-sub-menu {
