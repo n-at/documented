@@ -8,4 +8,9 @@ bower.json
 
 # jshint files
 .jshintignore
-.jshitrc
+.jshintrc
+
+# development stuff
+/.idea
+/.git
+.gitignore

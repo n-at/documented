@@ -1,10 +1,10 @@
 {
   "name": "documented",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Simple documentation generator",
   "main": "documented.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jshint ."
   },
   "bin": {
     "documented": "./documented.js"
@@ -15,7 +15,8 @@
   },
   "keywords": [
     "documentation",
-    "generator"
+    "generator",
+    "help"
   ],
   "author": "Alexey Nurgaliev <atnurgaliev@gmail.com>",
   "license": "BSD 3-Clause",
@@ -29,7 +30,6 @@
     "fs-extra": "0.13.*",
     "highlight.js": "8.4.*",
     "marked": "0.3.*",
-    "mkdirp": "0.5.0",
     "nconf": "0.7.*",
     "node-uuid": "1.4.*",
     "optimist": "0.6.*",
