@@ -1,10 +1,13 @@
 {
   "name": "documented",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Simple documentation generator",
   "main": "documented.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "documented": "./documented.js"
   },
   "repository": {
     "type": "git",
@@ -32,5 +35,6 @@
     "optimist": "0.6.*",
     "swig": "1.4.*",
     "winston": "0.8.*"
-  }
+  },
+  "preferGlobal": true
 }

@@ -1,0 +1,11 @@
+/site
+/node_modules
+/docs
+
+# bower files
+.bowerrc
+bower.json
+
+# jshint files
+.jshintignore
+.jshitrc
