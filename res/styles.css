@@ -48,6 +48,21 @@
     display: none;
 }
 
+.documented-menu-collapser {
+    margin: 10px 0 10px 15px;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .documented-menu-collapser {
+         display: inline;
+    }
+
+    .documented-menu-collapsible.menu-collapsed {
+        display: none;
+    }
+}
+
 .documented-sub-menu .sub-menu-title {
     font-size: 16px;
 }

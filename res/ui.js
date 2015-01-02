@@ -3,6 +3,7 @@ $(function() {
     styleTables();
     responsiveImages();
     setupMenu();
+    menuCollapserBinding();
 });
 
 function styleTables() {
@@ -47,4 +48,10 @@ function setupMenu() {
     });
 
     $menuWrapper.show();
+}
+
+function menuCollapserBinding() {
+    $('.documented-menu-collapser').click(function() {
+        $('.documented-menu-collapsible').toggleClass('menu-collapsed');
+    });
 }
