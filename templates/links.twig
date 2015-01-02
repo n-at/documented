@@ -1,7 +1,6 @@
-<ul>
-    {% for name, url in config.links %}
-        <li>
-            <a href="{{ url }}" target="_blank">{{ name }}</a>
-        </li>
-    {% endfor %}
-</ul>
+{% for name, url in config.links %}
+    <div>
+        <a href="{{ url }}" target="_blank">{{ name }}</a>
+    </div>
+{% endfor %}
+
