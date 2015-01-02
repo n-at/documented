@@ -5,22 +5,43 @@ _Simple documentation generator inspired by [daux.io](http://daux.io) and [jekyl
 
 ## Installation
 
-Install [node.js](http://nodejs.org) first. Also you need [bower](http://bower.io/).
+Install [node.js](http://nodejs.org) first. 
 
-Clone this repository and run in shell:
+### From npm
+
+Best option is installation from [npm](https://www.npmjs.com/). Run in shell:
+
+    $ npm install -g documented
+    
+### From GitHub
+
+Also you can install documented from GitHub. 
+
+You need [git](http://git-scm.com/) and [bower](http://bower.io/).
+
+Clone this repository:
+
+    $ git clone https://github.com/n-at/documented.git
+    $ cd documented
+ 
+And run in shell:
 
     $ npm install
     $ bower install
-
+    
 ## Usage
 
-To just generate the documentation, run in shell:
+To view available options, run in shell:
+
+    $ documented
+
+To just generate the documentation, run:
     
-    $ node documented.js
+    $ documented build
     
 documented also have built-in web server. To start it, run in shell:
 
-    $ node documented.js serve
+    $ documented serve
     
 And navigate your browser to http://localhost:4000 (by default, you can change port in the configuration file).
 
@@ -68,18 +89,6 @@ can define:
 * `highlight`.`style`: source code highlight style name (css file name without extension from 
   `/components/highlight.js/src/styles/`)
 * `links`: custom links to include in the bottom bar
-    
-## Configuration
-
-documented configuration is stored in the `config.json` file in the root directory. Here you can change:
-
-* `log_level`: severity of messages to put into log (`debug`, `info`, `warn` and `error`)
-* `docs`: documentation root directory
-* `img`: documentation images directory
-* `output`: directory to put generated documentation
-* `server_port`: port for built-in web server
-* `server_host`: host for built-in web server. Set to `0.0.0.0` for accepting all connections or `127.0.0.1` for 
-  local connections only
 
 ## License
 
