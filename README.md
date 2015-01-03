@@ -47,6 +47,8 @@ And navigate your browser to http://localhost:4000 (by default, you can change p
 
 ## Creating documentation
 
+Example of generated documentation you can see at http://n-at.github.io/documented
+
 By default, documented will look for documentation in the `docs` directory. 
 [This directory](https://github.com/n-at/documented/tree/master/docs) already contains some
 example documents. documented will put generated documentation into `site` directory. You can change documentation 
@@ -90,8 +92,6 @@ can define:
 * `highlight`.`style`: source code highlight style name (css file name without extension from 
   `/components/highlight.js/src/styles/`)
 * `links`: custom links to include to the bottom bar
-
-Example of generated documentation you can see at http://n-at.github.io/documented
 
 **Note for images.** Set path to image relative of images directory. For example, you have the image with name 
 `img.png`. In document you can insert it with code: `![example image](img.png)`.
