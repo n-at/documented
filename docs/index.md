@@ -4,6 +4,8 @@ title: documented examples
 ---
 
 This is an example *documented* documentation directory and file structure.
+
+More information about documented you can find at [repository page](https://github.com/n-at/documented).
  
 ## License
 
