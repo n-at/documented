@@ -48,7 +48,7 @@ Also here are inline ![inline image](img2.png) images.
 
 http://github.com
 
-[documemted](http://github.com/n-at/documented)
+[documented](http://github.com/n-at/documented)
 
 ## Blockquotes
 
