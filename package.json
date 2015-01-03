@@ -1,6 +1,6 @@
 {
   "name": "documented",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Simple documentation generator",
   "main": "documented.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "help"
   ],
   "author": "Alexey Nurgaliev <atnurgaliev@gmail.com>",
-  "license": "BSD 3-Clause",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/n-at/documented/issues"
   },
