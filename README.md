@@ -49,7 +49,7 @@ And navigate your browser to http://localhost:4000 (by default, you can change p
 
 Example of generated documentation you can see at http://n-at.github.io/documented
 
-By default, documented will look for documentation in the `docs` directory. 
+By default, documented will look for documentation in the `docs` directory and documentation images in the `docs/img`. 
 [This directory](https://github.com/n-at/documented/tree/master/docs) already contains some
 example documents. documented will put generated documentation into `site` directory. You can change documentation 
 and output directories with commandline options.
