@@ -1,0 +1,1 @@
+documented example generated documentation
