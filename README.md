@@ -43,7 +43,7 @@ documented also have built-in web server. To start it, run in shell:
 
     $ documented serve
     
-And navigate your browser to http://localhost:4000 (by default, you can change port in the configuration file).
+And navigate your browser to http://localhost:4000 (by default, you can change port with commandline options).
 
 ## Creating documentation
 
