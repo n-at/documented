@@ -1,6 +1,5 @@
 /site
 /node_modules
-/docs
 
 # bower files
 .bowerrc

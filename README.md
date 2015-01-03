@@ -19,7 +19,7 @@ Also you can install documented from GitHub.
 
 You need [git](http://git-scm.com/) and [bower](http://bower.io/).
 
-Clone this repository:
+Clone repository:
 
     $ git clone https://github.com/n-at/documented.git
     $ cd documented
@@ -47,15 +47,16 @@ And navigate your browser to http://localhost:4000 (by default, you can change p
 
 ## Creating documentation
 
-By default, documented will look for documentation in the `docs` directory. This directory already contains some
+By default, documented will look for documentation in the `docs` directory. 
+[This directory](https://github.com/n-at/documented/tree/master/docs) already contains some
 example documents. documented will put generated documentation into `site` directory. You can change documentation 
-and output directories in the configuration file.
+and output directories with commandline options.
 
 documented will process only markdown files (with `.md` extension), other will be ignored. If you want to know more 
 about markdown syntax, visit the GitHub [help page](https://help.github.com/articles/markdown-basics/).
 
 Each directory should contain an `index.md` file. Documents and directories in the menu will be sorted by their 
-names in the file system.
+names in the filesystem.
 
 Each document file should contain metadata section. This section contains several text lines in the `<name>:<value>` 
 format. Metadata will define document attributes:
@@ -73,7 +74,7 @@ Document metadata example:
     author: John Doe
     ---
 
-Index file metadata define directory attributes:
+Index file (`index.md`) metadata defines directory attributes:
  
 * `title`: directory name in the menu
 * `alias`: directory name in the URL (file system directory name by default)
@@ -88,7 +89,7 @@ can define:
 * `theme`: documentation visual theme name (css file name without extension from `/res/themes`)
 * `highlight`.`style`: source code highlight style name (css file name without extension from 
   `/components/highlight.js/src/styles/`)
-* `links`: custom links to include in the bottom bar
+* `links`: custom links to include to the bottom bar
 
 ## License
 
