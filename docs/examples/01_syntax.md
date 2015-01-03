@@ -40,9 +40,9 @@ Ordered
    
 ## Images
 
-![documented preview](/img/img1.png)
+![documented preview](img1.png)
 
-Also here are inline ![inline image](/img/img2.png) images.
+Also here are inline ![inline image](img2.png) images.
 
 ## Links
 

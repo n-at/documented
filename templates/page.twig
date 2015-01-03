@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="/res/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/res/highlight.js/src/styles/{{ config.highlight.style }}.css">
-    <link rel="stylesheet" href="/res/documented/styles.css">
-    <link rel="stylesheet" href="/res/documented/themes/{{ config.theme }}.css">
+    <link rel="stylesheet" href="{{ document.relativeUrlPath }}res/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ document.relativeUrlPath }}res/highlight.js/src/styles/{{ config.highlight.style }}.css">
+    <link rel="stylesheet" href="{{ document.relativeUrlPath }}res/documented/styles.css">
+    <link rel="stylesheet" href="{{ document.relativeUrlPath }}res/documented/themes/{{ config.theme }}.css">
 
-    <script src="/res/modernizr/modernizr.js"></script>
-    <script src="/res/jquery/dist/jquery.min.js"></script>
-    <script src="/res/documented/ui.js"></script>
+    <script src="{{ document.relativeUrlPath }}res/modernizr/modernizr.js"></script>
+    <script src="{{ document.relativeUrlPath }}res/jquery/dist/jquery.min.js"></script>
+    <script src="{{ document.relativeUrlPath }}res/documented/ui.js"></script>
 
     <title>{{ document.meta.title }} - {{ config.title }}</title>
 </head>

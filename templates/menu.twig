@@ -5,7 +5,7 @@
                 <div class="sub-menu-title {% if submenu.current %}menu-item-current{% endif %}">
                     <span class="glyphicon glyphicon-chevron-down menu-marker"></span>
                     {% if submenu.hasIndex %}
-                        <a href="{{ submenu.path }}">{{ submenu.title }}</a>
+                        <a href="{{ document.relativeUrlPath }}{{ submenu.path }}">{{ submenu.title }}</a>
                     {% else %}
                         <span>{{ submenu.title }}</span>
                     {% endif %}
@@ -16,7 +16,7 @@
 
         {% for item in menu.items %}
             <div class="menu-item {% if item.current %}menu-item-current{% endif %}">
-                <a href="{{ item.path }}">{{ item.title }}</a>
+                <a href="{{ document.relativeUrlPath }}{{ item.path }}">{{ item.title }}</a>
             </div>
         {% endfor %}
     </div>
