@@ -5,10 +5,6 @@
 .bowerrc
 bower.json
 
-# jshint files
-.jshintignore
-.jshintrc
-
 # development stuff
 /.idea
 /.git
