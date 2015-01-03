@@ -91,6 +91,8 @@ can define:
   `/components/highlight.js/src/styles/`)
 * `links`: custom links to include to the bottom bar
 
+Example of generated documentation you can see at http://n-at.github.io/documented
+
 **Note for images.** Set path to image relative of images directory. For example, you have the image with name 
 `img.png`. In document you can insert it with code: `![example image](img.png)`.
 
