@@ -1,0 +1,107 @@
+
+/* Header */
+/****************************************************************/
+.documented-header {
+    padding: 10px 25px;
+}
+
+.documented-header h1 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+/* Body */
+/****************************************************************/
+.documented-body {
+    margin-left: -15px;
+}
+
+.documented-content {
+    padding-top: 10px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+}
+
+.documented-page-header {
+    margin-top: 10px;
+}
+
+.documented-author, .documented-date {
+    font-size: 12px;
+}
+
+.documented-header-line {
+    margin-top: 0;
+}
+
+/* Menu */
+.documented-menu {
+    padding-bottom: 5px;
+    border-right: 1px solid;
+}
+
+.documented-sub-menu {
+    padding-left: 13px;
+}
+
+.documented-menu-wrapper {
+    display: none;
+}
+
+.documented-menu-collapser {
+    margin: 10px 0 10px 15px;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .documented-menu-collapser {
+         display: inline;
+    }
+
+    .documented-menu-collapsible.menu-collapsed {
+        display: none;
+    }
+}
+
+.documented-sub-menu .sub-menu-title {
+    font-size: 16px;
+}
+
+.documented-sub-menu .menu-marker {
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Footer */
+/****************************************************************/
+.documented-footer {
+    padding: 10px 25px;
+}
+
+.documented-copyright p {
+    text-align: right;
+}
+
+/* Bootstrap fixes */
+/****************************************************************/
+
+.img-responsive {
+    display: inline;
+}
+
+body {
+    font-size: 16px;
+}
+
+/* Bootstrap column fix  */
+/* http://stackoverflow.com/questions/19695784/how-can-i-make-bootstrap-columns-all-the-same-height */
+
+.row-height {
+    overflow: hidden;
+}
+
+.col-height {
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
