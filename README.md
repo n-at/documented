@@ -63,7 +63,7 @@ names in the filesystem.
 Each document file should contain metadata section. This section contains several text lines in the `<name>:<value>` 
 format. Metadata will define document attributes:
 
-* `title`: document title (file name by default)
+* `title`: document title (file name without extension by default)
 * `alias`: document name in the URL (file name by default)
 * `author`: document author (can be omitted)
 * `date`: document date of creation or modification (can be omitted)
