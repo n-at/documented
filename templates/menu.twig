@@ -3,7 +3,7 @@
         {% for submenu in menu.submenus %}
             <div class="sub-menu">
                 <div class="sub-menu-title {% if submenu.current %}menu-item-current{% endif %}">
-                    <span class="glyphicon glyphicon-chevron-down menu-marker"></span>
+                    <span class="menu-marker"></span>
                     {% if submenu.hasIndex %}
                         <a href="{{ document.relativeUrlPath }}{{ submenu.path }}">{{ submenu.title }}</a>
                     {% else %}
