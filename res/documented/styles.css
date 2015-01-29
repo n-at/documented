@@ -36,12 +36,13 @@
 
 /* Menu */
 .documented-menu {
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 15px;
     border-right: 1px solid;
 }
 
 .documented-sub-menu {
-    padding-left: 13px;
+    padding-left: 20px;
 }
 
 .documented-menu-wrapper {
@@ -63,13 +64,17 @@
     }
 }
 
+.documented-sub-menu .menu-item {
+    padding-bottom: 5px;
+}
+
 .documented-sub-menu .sub-menu-title {
-    font-size: 16px;
+    font-size: 18px;
+    padding-bottom: 5px;
 }
 
 .documented-sub-menu .menu-marker {
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 14px;
     cursor: pointer;
 }
 
