@@ -16,10 +16,10 @@
     margin-left: -15px;
 }
 
-.documented-content {
+.documented-content-wrapper {
+    padding-bottom: 20px;
     padding-top: 10px;
-    padding-bottom: 25px;
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 .documented-page-header {
@@ -36,9 +36,12 @@
 
 /* Menu */
 .documented-menu {
+    border-right: 1px solid;
+}
+
+.documented-menu-wrapper {
     padding-top: 10px;
     padding-bottom: 15px;
-    border-right: 1px solid;
 }
 
 .documented-sub-menu {
