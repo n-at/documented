@@ -6,6 +6,6 @@
     "bootstrap": "3.3.*",
     "jquery": "1.11.*",
     "modernizr": "2.8.*",
-    "highlight.js": "7.3.*"
+    "highlight.js": "https://github.com/isagalaev/highlight.js.git"
   }
 }

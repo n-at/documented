@@ -54,6 +54,7 @@ pre {
     border-color: #E7E7E9;
 }
 
+.documented-sub-menu .sub-menu-title,
 .documented-sub-menu .sub-menu-title a,
 .documented-sub-menu .menu-item a {
     color: #888;
