@@ -18,8 +18,7 @@ pre .keyword,
 pre .tag,
 pre .tex .command,
 pre .request,
-pre .status,
-pre .clojure .attribute {
+pre .status {
   color: #96CBFE;
 }
 
@@ -65,6 +64,8 @@ pre .nginx .built_in {
 
 pre .symbol,
 pre .ruby .symbol .string,
+pre .ruby .symbol .keyword,
+pre .ruby .symbol .keymethods,
 pre .number,
 pre .variable,
 pre .vbscript,
@@ -93,12 +94,6 @@ pre .number {
   color:#FF73FD;
 }
 
-pre .coffeescript .javascript,
-pre .javascript .xml,
-pre .tex .formula,
-pre .xml .javascript,
-pre .xml .vbscript,
-pre .xml .css,
-pre .xml .cdata {
+pre .tex .formula {
   opacity: 0.7;
 }

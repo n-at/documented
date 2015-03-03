@@ -23,13 +23,6 @@
   <link rel="alternate stylesheet" title="Monokai" href="styles/monokai.css">
   <link rel="alternate stylesheet" title="XCode" href="styles/xcode.css">
   <link rel="alternate stylesheet" title="Pojoaque" href="styles/pojoaque.css">
-  <link rel="alternate stylesheet" title="Rainbow" href="styles/rainbow.css">
-  <link rel="alternate stylesheet" title="Tomorrow" href="styles/tomorrow.css">
-  <link rel="alternate stylesheet" title="Tomorrow Night" href="styles/tomorrow-night.css">
-  <link rel="alternate stylesheet" title="Tomorrow Night Bright" href="styles/tomorrow-night-bright.css">
-  <link rel="alternate stylesheet" title="Tomorrow Night Blue" href="styles/tomorrow-night-blue.css">
-  <link rel="alternate stylesheet" title="Tomorrow Night Eighties" href="styles/tomorrow-night-eighties.css">
-
 
   <style>
     body {
@@ -58,18 +51,19 @@
       margin: 0; font-size: medium;
     }
     #switch {
-      overflow: auto; width: 67em;
+      overflow: auto; width: 57em;
       list-style: none;
       padding: 0; margin: 0;
     }
     #switch li {
-      float: left; width: 12em;
+      float: left; width: 10em;
       padding: 0.1em; margin: 0.1em 1em 0.1em 0;
       background: #EEE;
       cursor: pointer;
     }
     #switch li.current {
       background: #CCC;
+      font-weight: bold;
     }
     .test {
       color: #888;
@@ -188,9 +182,6 @@ def somefunc(param1='', param2=0):
     return (param2 - param1 + 1) or None
 
 class SomeClass:<br>    pass
-
-&gt;&gt;&gt; message = '''interpreter
-... prompt'''
 </code></pre>
 
   <tr>
@@ -219,7 +210,7 @@ module ABC::DEF
   # @return [String] nothing
   def foo(test)
     Thread.new do |blockvar|
-      ABC::DEF.reverse(:a_symbol, :'a symbol', :<=>, 'test' + test)
+      ABC::DEF.reverse(:a_symbol, :'a symbol' + 'test' + test)
     end.join
   end
 
@@ -229,7 +220,6 @@ end
 
 anIdentifier = an_identifier
 Constant = 1
-render action: :new
 </code></pre>
 
   <tr>
@@ -279,7 +269,7 @@ abstract class URI extends BaseURI
    */
   static public function _factory($stats = array(), $uri = 'http')
   {
-      $uri = explode(':', $uri, 0b10);
+      $uri = explode(':', $uri, 2);
       $schemeSpecific = isset($uri[1]) ? $uri[1] : '';
       $desc = 'Multi
 line description';
@@ -516,10 +506,6 @@ li[lang=ru] {
       return processBlock(block, true, 0x0F) + ' class=""';
   } catch (e) {
     /* handle exception */
-
-    var e4x =
-        &lt;div&gt;Example
-            &lt;p&gt;1234&lt;/p&gt;&lt;/div&gt;;
   }
   for (var i = 0 / 2; i &lt; classes.length; i++) { // "0 / 2" should not be parsed as regexp
     if (checkCondition(classes[i]) === undefined)
@@ -552,18 +538,14 @@ math =
 race = (winner, runners...) ->
   print winner, runners
 
-class Animal extends Being
-  constructor: (@name) ->
-
-  move: (meters) ->
-    alert @name + " moved #{meters}m."
-
 hi = `function() {
   return [document.title, "Hello JavaScript"].join(": ");
 }`
 
+substr = "JavaScript numbers test #{ 010 / 0xf }"
+
 heredoc = """
-CoffeeScript numbers test #{ 010 + 0xf / 0b10 }
+CoffeeScript numbers test #{ 010 / 0b10 }
 """
 
 ###
@@ -691,25 +673,6 @@ comment ]==]
 </code></pre>
 
   <tr>
-    <th>AppleScript
-    <td class="applescript">
-<pre><code>repeat 5 times
-    if foo is greater than bar then
-        display dialog "Hello there"
-    else
-        beep
-    end if
-end repeat
-
-(* comment (*nested comment*) *)
-on do_something(s, y)
-    return {s + pi, y mod 4}
-end do_something
-
-do shell script "/bin/echo 'hello'"
-</code></pre>
-
-  <tr>
     <th>Delphi
     <td class="delphi">
 <pre><code>TList=Class(TObject)
@@ -812,7 +775,7 @@ int main(int argc, char *argv[]) {
 @end
 
 @interface Test : NSObject &lt;HelloDelegate, WorldDataSource&gt; {
-  NSString *_greeting;
+	NSString *_greeting;
 }
 
 @property (nonatomic, readonly) NSString *greeting;
@@ -824,23 +787,23 @@ int main(int argc, char *argv[]) {
 @synthesize test=_test;
 
 + (id) test {
-  return [self testWithGreeting:@"Hello, world!\nFoo bar!"];
+	return [self testWithGreeting:@"Hello, world!\nFoo bar!"];
 }
 
 + (id) testWithGreeting:(NSString*)greeting {
-  return [[[self alloc] initWithGreeting:greeting] autorelease];
+	return [[[self alloc] initWithGreeting:greeting] autorelease];
 }
 
 - (id) initWithGreeting:(NSString*)greeting {
-  if ( (self = [super init]) ) {
-    _greeting = [greeting retain];
-  }
-  return self;
+	if ( (self = [super init]) ) {
+		_greeting = [greeting retain];
+	}
+	return self;
 }
 
 - (void) dealloc {
-  [_greeting release];
-  [super dealloc];
+	[_greeting release];
+	[super dealloc];
 }
 
 @end
@@ -862,12 +825,12 @@ namespace Test {
 
 /* defining a class */
 class Track : GLib.Object {              /* subclassing 'GLib.Object' */
-  public double mass;                  /* a public field */
-  public double name { get; set; }     /* a public property */
-  private bool terminated = false;     /* a private field */
-  public void terminate() {            /* a public method */
-    terminated = true;
-  }
+	public double mass;                  /* a public field */
+	public double name { get; set; }     /* a public property */
+	private bool terminated = false;     /* a private field */
+	public void terminate() {            /* a public method */
+	  terminated = true;
+	}
 }
 
 const ALL_UPPER_CASE = "you should follow this convention";
@@ -973,10 +936,10 @@ void main() pure nothrow @safe {
     <th>RenderMan RSL
     <td class="rsl">
 <pre><code>#define TEST_DEFINE 3.14
-/*  plastic surface shader
+/*	plastic surface shader
  *
- *  Pixie is:
- *  (c) Copyright 1999-2003 Okan Arikan. All rights reserved.
+ * 	Pixie is:
+ * 	(c) Copyright 1999-2003 Okan Arikan. All rights reserved.
  */
 
 surface plastic (float Ka = 1, Kd = 0.5, Ks = 0.5, roughness = 0.1;
@@ -1178,45 +1141,6 @@ heapExample
     (print (+ x y))
   )</code></pre>
 
- <tr>
-    <th>Clojure
-    <td class="clojure">
-<pre><code>;   You must not remove this notice, or any other, from this software.
-
-(ns ^{:doc "The core Clojure language."
-       :author "Rich Hickey"}
-  clojure.core)
-
-(def unquote)
-
-(def
-  ^{:macro true
-    :added "1.0"}
-  let (fn* let [&form &env & decl] (cons 'let* decl)))
-
-(def
-
- defn (fn defn [&form &env name & fdecl]
-        (let [m (conj {:arglists (list 'quote (sigs fdecl))} m)
-              m (let [inline (:inline m)
-                      ifn (first inline)
-                      iname (second inline)]
-                  ;; same as: (if (and (= 'fn ifn) (not (symbol? iname))) ...)
-                  (if (if (clojure.lang.Util/equiv 'fn ifn)
-                        (if (instance? clojure.lang.Symbol iname) false true))
-                    ;; inserts the same fn name to the inline fn if it does not have one
-                    (assoc m :inline (cons ifn (cons (clojure.lang.Symbol/intern (.concat (.getName ^clojure.lang.Symbol name) "__inliner"))
-                                                     (next inline))))
-                    m))
-              m (conj (if (meta name) (meta name) {}) m)]
-          (list 'def (with-meta name m)
-                ;;todo - restore propagation of fn name
-                ;;must figure out how to convey primitive hints to self calls first
-                (cons `fn fdecl) ))))
-
-(. (var defn) (setMacro))
-</code></pre>
-
   <tr>
     <th>Ini file
     <td class="ini">
@@ -1229,7 +1153,7 @@ DefaultProfile=True
 AutoCreate = no
 
 [AutoExec]
-use-prompt="prompt"
+Use="prompt"
 Glob=autoexec_*.ini
 AskAboutIgnoredPlugins=0
 </code></pre>
@@ -1283,10 +1207,9 @@ http {
     #lingering_time 30;
 
     server {
+        listen        one.example.com;
         server_name   one.example.com  www.one.example.com;
         access_log   /var/log/nginx.access_log  main;
-
-        rewrite (.*) /index.php?page=$1 break;
 
         location / {
             proxy_pass         http://127.0.0.1/;
@@ -1386,12 +1309,6 @@ then
  echo "Superuser rights is required"
  echo 'Printing the # sign'
  exit 2
-fi
-
-if test $# -eq 0
-then
-elif test [ $1 == 'start' ]
-else
 fi
 
 genApacheConf(){
@@ -1627,27 +1544,6 @@ $$
 </code></pre>
 
   <tr>
-    <th>BrainFuck
-    <td class="brainfuck">
-<pre><code>++++++++++
-[ 3*10 and 10*10
-  ->+++>++++++++++<<
-]>>
-[ filling cells
-  ->++>>++>++>+>++>>++>++>++>++>++>++>++>++>++>++>++[<]<[<]<[<]>>
-]<
-+++++++++<<
-[ rough codes correction loop
-  ->>>+>+>+>+++>+>+>+>+>+>+>+>+>+>+>+>+>+>+[<]<
-]
-more accurate сodes correction
->>>++>
--->+++++++>------>++++++>++>+++++++++>++++++++++>++++++++>--->++++++++++>------>++++++>
-++>+++++++++++>++++++++++++>------>+++
-rewind and output
-[<]>[.>]</code></pre>
-
-  <tr>
     <th>Haskell
     <td class="haskell">
 <pre>
@@ -1706,9 +1602,9 @@ pingUDPPort s a = sendTo s (Strict.singleton 0) a >> return ()
 
 %% state
 -record(state, {
-    cm,
-    channel
-   }).
+	  cm,
+	  channel
+	 }).
 
 test(Foo)->Foo.
 
@@ -1751,7 +1647,7 @@ union_dot_union({union, _}=U1, {union, _}=U2) ->
 
   <tr>
     <th>Erlang REPL
-    <td class="erlang-repl">
+    <td class="erlang_repl">
 <pre><code>1> Str = "abcd".
 "abcd"
 2> L = test:length(Str).
@@ -1884,9 +1780,6 @@ function [net] = get_fit_network(inputs, targets)
     % Train and Apply Network
     [net,tr] = train(net,inputs,targets);
 end
-
-foo_matrix = [1, 2, 3; 4, 5, 6]''';
-foo_cell = {1, 2, 3; 4, 5, 6}''.'.';
 </code></pre>
 
   <tr>
@@ -1962,7 +1855,6 @@ foo %union% bar
 `"test"`
 
 </code></pre>
-
 
 </table>
 
@@ -2070,10 +1962,5 @@ foo %union% bar
   &lt;p&gt;Hello, World!
 &lt;/div&gt;
 </code></pre>
-
-  <tr>
-    <th>Non-code &lt;pre&gt;
-    <td>
-<pre><samp>Computer output</samp></pre>
 
 </table>

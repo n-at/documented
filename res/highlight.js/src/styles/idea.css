@@ -32,7 +32,7 @@ pre .pi,
 pre .chunk,
 pre .shebang,
 pre .apache .cbracket,
-pre .prompt,
+pre .input_number,
 pre .http .title {
   color: #808000;
 }
@@ -53,7 +53,6 @@ pre .css .function,
 pre .ini .title,
 pre .css .class,
 pre .list .title,
-pre .clojure .title,
 pre .nginx .title,
 pre .tex .command,
 pre .request,
@@ -88,6 +87,8 @@ pre .apache .tag {
 
 pre .symbol,
 pre .ruby .symbol .string,
+pre .ruby .symbol .keyword,
+pre .ruby .symbol .keymethods,
 pre .char,
 pre .tex .formula {
   color: #000;

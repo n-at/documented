@@ -18,8 +18,7 @@ pre .css .id,
 pre .lisp .title,
 pre .nginx .title,
 pre .request,
-pre .status,
-pre .clojure .attribute {
+pre .status {
   color: #E3CEAB;
 }
 
@@ -51,7 +50,7 @@ pre .tex .special {
 }
 
 pre .diff .chunk,
-pre .subst {
+pre .ruby .subst {
   color: #8F8F8F;
 }
 
@@ -64,14 +63,17 @@ pre .ruby .class .parent,
 pre .apache .tag,
 pre .nginx .built_in,
 pre .tex .command,
-pre .prompt {
+pre .input_number {
     color: #efef8f;
 }
 
 pre .dos .winutils,
 pre .ruby .symbol,
 pre .ruby .symbol .string,
-pre .ruby .string {
+pre .ruby .symbol .keyword,
+pre .ruby .symbol .keymethods,
+pre .ruby .string,
+pre .ruby .instancevar {
   color: #DCA3A3;
 }
 
@@ -104,12 +106,10 @@ pre .doctype {
 }
 
 pre .coffeescript .javascript,
-pre .javascript .xml,
-pre .tex .formula,
+pre .xml .css,
 pre .xml .javascript,
 pre .xml .vbscript,
-pre .xml .css,
-pre .xml .cdata {
+pre .tex .formula {
   opacity: 0.5;
 }
 

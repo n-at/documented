@@ -14,6 +14,7 @@ import json
 from functools import partial
 
 REPLACES = {
+    'defaultMode': 'dM',
     'case_insensitive': 'cI',
     'lexems': 'l',
     'contains': 'c',
@@ -52,7 +53,6 @@ REPLACES = {
     'illegalRe': 'iR',
     'lexemsRe': 'lR',
     'terminators': 't',
-    'terminator_end': 'tE',
 }
 
 CATEGORIES = {
@@ -87,13 +87,12 @@ def mapnonstrings(source, func):
                     break
     return ''.join(result)
 
-def compress_content(tools_path, content, filetype='js'):
-    if filetype == 'js':
-        for s, r in REPLACES.items():
-            content = mapnonstrings(content, partial(re.sub, r'\b%s\b' % s, r))
-        content = re.sub(r'(block|parentNode)\.cN', r'\1.className', content)
+def compress_content(tools_path, content):
+    for s, r in REPLACES.items():
+        content = mapnonstrings(content, partial(re.sub, r'\b%s\b' % s, r))
+    content = re.sub(r'(block|parentNode)\.cN', r'\1.className', content)
 
-    args = ['java', '-jar', os.path.join(tools_path, 'yuicompressor.jar'), '--type', filetype]
+    args = ['java', '-jar', os.path.join(tools_path, 'yuicompressor.jar'), '--type', 'js']
     p = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     p.stdin.write(content.encode('utf-8'))
     p.stdin.close()
@@ -157,41 +156,43 @@ def strip_read(filename):
     s = pattern.sub('', s)
     return s.strip()
 
-def wrap_language(filename, content, compressed):
-    '''
-    Wraps a language file content for the browser build. The "compressed" parameter
-    selects which wrapping code to use:
-
-    - If compressed is False the function expects source files to be uncompressed and
-      wraps them maintaining readability of the source.
-    - If compressed is True the function expects source files to be already compressed
-      individually and wraps them with the minimal code, effectively emulating
-      what yuicompressor does.
-    '''
-    name = lang_name(filename)
-    if compressed:
-        name = ('["%s"]' if '-' in name or name[0].isdigit() else '.%s') % name
-        content = content.rstrip(';')
-        wrap = 'hljs.LANGUAGES%s=%s(hljs);'
-    else:
-        wrap = 'hljs.LANGUAGES[\'%s\'] = %s(hljs);\n'
-    return wrap % (name, content)
-
 def glue_files(hljs_filename, language_filenames, compressed):
     '''
     Glues files together for the browser build.
+
+    The "compressed" parameter controls two modes of execution:
+
+    - If compressed is False the function expects source files to be uncompressed and
+      glues them together while maintaining readability of the source. This is the mode
+      used when called from shell when the whole glued file can be then compressed at
+      once.
+    - If compressed is True the function expects source files to be alread compressed
+      individually and glues them together with the minimal glue, effectively emulating
+      what yuicompressor does. This mode is used when called from hljs_download on the
+      server where any form of compression on the fly is too slow.
     '''
     if compressed:
-        hljs = 'var hljs=new %s();' % strip_read(hljs_filename).rstrip(';')
-        file_func = lambda f: open(f).read()
+        hljs = 'var hljs=new %s();'
+        glue = 'hljs.LANGUAGES%s=%s(hljs);'
+        def name_func(filename):
+            name = lang_name(filename)
+            return ('["%s"]' if '-' in name or name[0].isdigit() else '.%s') % name
+        def file_func(filename):
+            return strip_read(filename).rstrip(';')
     else:
-        hljs = 'var hljs = new %s();\n' % strip_read(hljs_filename)
+        hljs = 'var hljs = new %s();'
+        glue = '\nhljs.LANGUAGES[\'%s\'] = %s(hljs);'
+        name_func = lang_name
         file_func = strip_read
-    return ''.join([hljs] + [wrap_language(f, file_func(f), compressed) for f in language_filenames])
+    hljs =  hljs % file_func(hljs_filename)
+    files = ((name_func(f), file_func(f)) for f in language_filenames)
+    files = [glue % data for data in files]
+    return ''.join([hljs] + files)
 
-def build_browser(root, build_path, filenames, options):
+def build_browser(root, build_path, languages, options):
     src_path = os.path.join(root, 'src')
     tools_path = os.path.join(root, 'tools')
+    filenames = language_filenames(src_path, languages)
     print('Building %d files:\n%s' % (len(filenames), '\n'.join(filenames)))
     content = glue_files(os.path.join(src_path, 'highlight.js'), filenames, False)
     print('Uncompressed size:', len(content.encode('utf-8')))
@@ -200,22 +201,11 @@ def build_browser(root, build_path, filenames, options):
         content = compress_content(tools_path, content)
         print('Compressed size:', len(content.encode('utf-8')))
     open(os.path.join(build_path, 'highlight.pack.js'), 'w').write(content)
+    print('Done.')
 
-def build_amd(root, build_path, filenames, options):
+def build_node(root, build_path, languages, options):
     src_path = os.path.join(root, 'src')
-    tools_path = os.path.join(root, 'tools')
-    print('Building %d files:\n%s' % (len(filenames), '\n'.join(filenames)))
-    content = glue_files(os.path.join(src_path, 'highlight.js'), filenames, False)
-    content = 'define(function() {\n%s\nreturn hljs;\n});' % content # AMD wrap
-    print('Uncompressed size:', len(content.encode('utf-8')))
-    if options.compress:
-        print('Compressing...')
-        content = compress_content(tools_path, content)
-        print('Compressed size:', len(content.encode('utf-8')))
-    open(os.path.join(build_path, 'highlight.pack.js'), 'w').write(content)
-
-def build_node(root, build_path, filenames, options):
-    src_path = os.path.join(root, 'src')
+    filenames = language_filenames(src_path, languages)
     print('Building %d files:' % len(filenames))
     for filename in filenames:
         print(filename)
@@ -242,42 +232,14 @@ def build_node(root, build_path, filenames, options):
     content = json.dumps(package, indent=2)
     open(os.path.join(build_path, 'package.json'), 'w').write(content)
 
-def build_cdn(root, build_path, filenames, options):
-    src_path = os.path.join(root, 'src')
-    tools_path = os.path.join(root, 'tools')
-    if not options.compress:
-        print('Notice: forcing compression for "cdn" target')
-        options.compress = True
-    build_browser(root, build_path, filenames, options)
-    os.rename(os.path.join(build_path, 'highlight.pack.js'), os.path.join(build_path, 'highlight.min.js'))
-    print('Compressing all languages...')
-    lang_path = os.path.join(build_path, 'languages')
-    os.mkdir(lang_path)
-    all_filenames = language_filenames(src_path, [])
-    for filename in all_filenames:
-        print(filename)
-        content = compress_content(tools_path, open(filename).read())
-        content = wrap_language(filename, content, True)
-        open(os.path.join(lang_path, '%s.min.js' % lang_name(filename)), 'w').write(content)
-    print('Compressing styles...')
-    build_style_path = os.path.join(build_path, 'styles')
-    src_style_path = os.path.join(src_path, 'styles')
-    os.mkdir(build_style_path)
-    styles = [lang_name(f) for f in os.listdir(src_style_path) if f.endswith('.css')]
-    for style in styles:
-        filename = os.path.join(src_style_path, '%s.css' % style)
-        print(filename)
-        content = compress_content(tools_path, open(filename).read(), 'css')
-        open(os.path.join(build_style_path, '%s.min.css' % style), 'w').write(content)
+    print('Done.')
 
-def build(buildfunc, root, languages, options):
+def build(buildfunc, root, *args):
     build_path = os.path.join(root, 'build')
     if os.path.exists(build_path):
         shutil.rmtree(build_path)
     os.mkdir(build_path)
-    filenames = language_filenames(os.path.join(root, 'src'), languages)
-    buildfunc(root, build_path, filenames, options)
-    print('Done.')
+    buildfunc(root, build_path, *args)
 
 if __name__ == '__main__':
     parser = optparse.OptionParser()
@@ -289,7 +251,7 @@ if __name__ == '__main__':
     parser.add_option(
         '-t', '--target',
         dest = 'target', default = 'browser',
-        help = 'Target format: "browser" (default), "node", "cdn", "amd"',
+        help = 'Target format: "browser" (the default) or "node".',
     )
     parser.set_usage('''%%prog [options] [<language>|:<category> ...]
 

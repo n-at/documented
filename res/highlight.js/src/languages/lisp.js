@@ -73,13 +73,16 @@ function(hljs) {
   BODY.contains = [QUOTED1, QUOTED2, LIST, LITERAL].concat(NUMBERS).concat([STRING, COMMENT, VARIABLE, KEYWORD]);
 
   return {
-    illegal: '[^\\s]',
-    contains: NUMBERS.concat([
-      LITERAL,
-      STRING,
-      COMMENT,
-      QUOTED1, QUOTED2,
-      LIST
-    ])
+    case_insensitive: true,
+    defaultMode: {
+      illegal: '[^\\s]',
+      contains: NUMBERS.concat([
+        LITERAL,
+        STRING,
+        COMMENT,
+        QUOTED1, QUOTED2,
+        LIST
+      ])
+    }
   };
 }

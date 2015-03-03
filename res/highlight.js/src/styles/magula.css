@@ -13,9 +13,8 @@ pre code {
 }
 
 pre code,
-pre .subst,
-pre .lisp .title,
-pre .clojure .built_in {
+pre .ruby .subst,
+pre .lisp .title {
   color: black;
 }
 
@@ -28,6 +27,9 @@ pre .rules .value .number,
 pre .preprocessor,
 pre .ruby .symbol,
 pre .ruby .symbol .string,
+pre .ruby .symbol .keyword,
+pre .ruby .symbol .keymethods,
+pre .instancevar,
 pre .aggregate,
 pre .template_tag,
 pre .django .variable,
@@ -76,8 +78,7 @@ pre .shebang,
 pre .apache .sqbracket,
 pre .nginx .built_in,
 pre .tex .formula,
-pre .prompt,
-pre .clojure .attribute {
+pre .input_number {
   color: #00e;
 }
 
@@ -104,12 +105,10 @@ pre .nginx .built_in {
 }
 
 pre .coffeescript .javascript,
-pre .javascript .xml,
-pre .tex .formula,
+pre .xml .css,
 pre .xml .javascript,
 pre .xml .vbscript,
-pre .xml .css,
-pre .xml .cdata {
+pre .tex .formula {
   opacity: 0.5;
 }
 

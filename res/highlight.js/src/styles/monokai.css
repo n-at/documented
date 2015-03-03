@@ -7,6 +7,10 @@ pre code {
   background: #272822;
 }
 
+pre .params .identifier .keymethods {
+	color: #FD971F;
+}
+
 pre .tag,
 pre .tag .title,
 pre .keyword,
@@ -15,7 +19,6 @@ pre .change,
 pre .winutils,
 pre .flow,
 pre .lisp .title,
-pre .clojure .built_in,
 pre .nginx .title,
 pre .tex .special {
   color: #F92672;
@@ -35,7 +38,6 @@ pre .class .title {
 
 pre .attribute,
 pre .symbol,
-pre .symbol .string,
 pre .value,
 pre .regexp {
 	color: #BF79DB;
@@ -43,10 +45,11 @@ pre .regexp {
 
 pre .tag .value,
 pre .string,
-pre .subst,
+pre .ruby .subst,
 pre .title,
 pre .haskell .type,
 pre .preprocessor,
+pre .ruby .instancevar,
 pre .ruby .class .parent,
 pre .built_in,
 pre .sql .aggregate,
@@ -54,6 +57,7 @@ pre .django .template_tag,
 pre .django .variable,
 pre .smalltalk .class,
 pre .javadoc,
+pre .ruby .string,
 pre .django .filter .argument,
 pre .smalltalk .localvars,
 pre .smalltalk .array,
@@ -65,7 +69,7 @@ pre .envvar,
 pre .apache .tag,
 pre .apache .cbracket,
 pre .tex .command,
-pre .prompt {
+pre .input_number {
   color: #A6E22E;
 }
 
@@ -104,11 +108,9 @@ pre .status {
 }
 
 pre .coffeescript .javascript,
-pre .javascript .xml,
-pre .tex .formula,
+pre .xml .css,
 pre .xml .javascript,
 pre .xml .vbscript,
-pre .xml .css,
-pre .xml .cdata {
+pre .tex .formula {
   opacity: 0.5;
 }
