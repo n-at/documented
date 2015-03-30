@@ -3,18 +3,21 @@ documented
 
 _Simple documentation generator inspired by [daux.io](http://daux.io) and [jekyll](http://jekyllrb.com)._
 
-
 [![NPM](https://nodei.co/npm/documented.png?downloads=true&downloadRank=true)](https://nodei.co/npm/documented)
 
 ## Installation
 
-Install [node.js](http://nodejs.org) first. 
+documented requires [node.js with npm](http://nodejs.org). 
 
 ### From npm
 
 Best option is installation from [npm](https://www.npmjs.com/). Run in shell:
 
-    $ npm install -g documented
+    $ npm install documented -g
+    
+documented will be available in shell as
+
+    $ documented
     
 ### From GitHub
 
@@ -27,14 +30,18 @@ Clone repository:
     $ git clone https://github.com/n-at/documented.git
     $ cd documented
  
-And run in shell:
+Install code dependencies:
 
     $ npm install
     $ bower install
     
+documented can be run from code directory:
+ 
+    $ node documented
+    
 ## Usage
 
-To view available options, run in shell:
+To view available options, run:
 
     $ documented
 
@@ -42,7 +49,7 @@ To just generate the documentation, run:
     
     $ documented build
     
-documented also have built-in web server. To start it, run in shell:
+documented also has a built-in web server. To start it, run:
 
     $ documented serve
     
@@ -50,18 +57,17 @@ And navigate your browser to http://localhost:4000 (by default, you can change p
 
 ## Creating documentation
 
-Example of generated documentation you can see at http://n-at.github.io/documented
+Example of generated documentation you can see at [GitHub project page](http://n-at.github.io/documented).
 
 By default, documented will look for documentation in the `docs` directory and documentation images in the `docs/img`. 
-[This directory](https://github.com/n-at/documented/tree/master/docs) already contains some
-example documents. documented will put generated documentation into `site` directory. You can change documentation 
-and output directories with commandline options.
+[Here](https://github.com/n-at/documented/tree/master/docs) you can find some example documents. 
+documented will put generated documentation into `site` directory. You can change documentation, images and output 
+paths with commandline options.
 
 documented will process only markdown files (with `.md` extension), other will be ignored. If you want to know more 
 about markdown syntax, visit the GitHub [help page](https://help.github.com/articles/markdown-basics/).
 
-Each directory should contain an `index.md` file. Documents and directories in the menu will be sorted by their 
-names in the filesystem.
+Each directory should contain an `index.md` file.
 
 Each document file should contain metadata section. This section contains several text lines in the `<name>:<value>` 
 format. Metadata will define document attributes:
@@ -85,19 +91,43 @@ Index file (`index.md`) metadata defines directory attributes:
 * `alias`: directory name in the URL (file system directory name by default)
 * `has_index`: when equals to `false`, index.html page will not be generated
   
-Metadata section ends with line containing `---`.
+Metadata section ends with line containing only `---` (three dashes).
   
 Documentation configuration is stored in the `config.json` file inside of documentation root directory. Here you 
 can define:
  
-* `title`: entire documentation title
-* `theme`: documentation visual theme name (css file name without extension from `/res/themes`)
+* `title`: the entire documentation title
+* `theme`: documentation visual theme name (css file name without extension from 
+  [documented built-in themes](https://github.com/n-at/documented/tree/master/res/themes))
 * `highlight`.`style`: source code highlight style name (css file name without extension from 
   `/components/highlight.js/src/styles/`)
 * `links`: custom links to include to the bottom bar
 
+Configuration example:
+
+    {
+      "title": "documented",
+      "theme": "teal-dark",
+      "highlight": {
+        "style": "github"
+      },
+      "copyright": "documented is licensed under BSD",
+      "links": {
+        "GitHub": "http://github.com/n-at/documented",
+        "twitter": "http://twitter.com/atnurgaliev"
+      }
+    }
+
+Files and directories in the result documentation menu will be sorted by their names in the filesystem (or aliases).
+It is recommended to give names (or aliases) which start with number and consist of latin letters, digits and 
+underscores. For example:
+
+    00_markdown.md
+    01_syntax.md
+    02_github.md
+
 **Note for images.** Set path to image relative of images directory. For example, you have the image with name 
-`img.png`. In document you can insert it with code: `![example image](img.png)`.
+`img.png` in the root of images directory. In document you can insert it with code: `![example image](img.png)`.
 
 ## License
 
