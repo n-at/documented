@@ -3,6 +3,8 @@ documented
 
 _Simple documentation generator inspired by [daux.io](http://daux.io) and [jekyll](http://jekyllrb.com)._
 
+[Example](http://n-at.github.io/documented) of generated documentation.
+
 [![NPM](https://nodei.co/npm/documented.png?downloads=true&downloadRank=true)](https://nodei.co/npm/documented)
 
 ## Installation
