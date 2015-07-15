@@ -7,7 +7,8 @@
         styleTables();
         responsiveImages();
         setupMenu();
-        menuCollapserBinding();
+
+        sidebarCollapserBinding();
     });
 
     function styleTables() {
@@ -58,9 +59,9 @@
         $menuWrapper.show();
     }
 
-    function menuCollapserBinding() {
-        $('.documented-menu-collapser').click(function() {
-            $('.documented-menu-collapsible').toggleClass('menu-collapsed');
+    function sidebarCollapserBinding() {
+        $('.documented-sidebar-collapser').click(function() {
+            $('.documented-sidebar-collapsible').toggleClass('sidebar-collapsed');
         });
     }
 
