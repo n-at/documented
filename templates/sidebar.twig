@@ -1,0 +1,27 @@
+
+<button class="btn btn-default documented-sidebar-collapser">
+    <span class="glyphicon glyphicon-menu-hamburger"></span>
+</button>
+
+<div class="documented-sidebar-collapsible sidebar-collapsed">
+
+    {# Menu #}
+    <div class="documented-menu">
+        {% include "menu.twig" %}
+    </div>
+
+    {# Links (if exists) #}
+    {% if config.links %}
+        <hr>
+        <div class="documented-links">
+            {% include "links.twig" %}
+        </div>
+    {% endif %}
+
+    {# Copyright #}
+    <hr>
+    <div class="documented-copyright">
+        {% include "copyright.twig" %}
+    </div>
+
+</div>

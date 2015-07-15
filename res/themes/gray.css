@@ -10,7 +10,7 @@ pre {
 /* Header */
 /****************************************************************/
 .documented-header {
-    border-bottom: 1px #2D2D2D;
+    border-bottom: 1px solid #E7E7E9;
     background-color: #eee;
     color: #666;
 }
@@ -48,12 +48,13 @@ pre {
     font-style: italic;
 }
 
-/* Menu */
-.documented-menu {
+/* Sidebar */
+.documented-sidebar {
     background-color: #F7F7F7;
     border-color: #E7E7E9;
 }
 
+/* Menu */
 .documented-sub-menu .sub-menu-title,
 .documented-sub-menu .sub-menu-title a,
 .documented-sub-menu .menu-item a {

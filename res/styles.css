@@ -2,12 +2,12 @@
 /* Header */
 /****************************************************************/
 .documented-header {
-    padding: 10px 25px;
+    padding: 5px 15px;
 }
 
 .documented-header h1 {
-    margin-top: 10px;
-    font-size: 25px;
+    margin: 5px 0;
+    font-size: 18px;
 }
 
 /* Body */
@@ -34,14 +34,34 @@
     margin-top: 0;
 }
 
-/* Menu */
-.documented-menu {
+/* Sidebar */
+.documented-sidebar {
     border-right: 1px solid;
 }
 
+.documented-sidebar-collapser {
+    margin: 10px 0 10px 15px;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .documented-sidebar-collapser {
+        display: inline;
+    }
+
+    .documented-sidebar-collapsible.sidebar-collapsed {
+        display: none;
+    }
+}
+
+/* Copyright */
+.documented-copyright {
+    margin-left: 20px;
+}
+
+/* Menu */
 .documented-menu-wrapper {
     padding-top: 10px;
-    padding-bottom: 15px;
 }
 
 .documented-sub-menu {
@@ -52,43 +72,18 @@
     display: none;
 }
 
-.documented-menu-collapser {
-    margin: 10px 0 10px 15px;
-    display: none;
-}
-
-@media (max-width: 991px) {
-    .documented-menu-collapser {
-         display: inline;
-    }
-
-    .documented-menu-collapsible.menu-collapsed {
-        display: none;
-    }
-}
-
 .documented-sub-menu .menu-item {
     padding-bottom: 5px;
 }
 
 .documented-sub-menu .sub-menu-title {
-    font-size: 18px;
+    /*font-size: 18px;*/
     padding-bottom: 5px;
 }
 
 .documented-sub-menu .menu-marker {
-    font-size: 14px;
+    font-size: 1em;
     cursor: pointer;
-}
-
-/* Footer */
-/****************************************************************/
-.documented-footer {
-    padding: 10px 25px;
-}
-
-.documented-copyright p {
-    text-align: right;
 }
 
 /* Bootstrap fixes */
@@ -96,10 +91,6 @@
 
 .img-responsive {
     display: inline;
-}
-
-body {
-    font-size: 16px;
 }
 
 /* Bootstrap column fix  */
