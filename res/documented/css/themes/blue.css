@@ -1,0 +1,89 @@
+/* Variables */
+/****************************************************************/
+/* Global */
+/****************************************************************/
+body {
+  background-color: #3f4657;
+}
+pre {
+  background-color: #ffffff;
+}
+/* Header */
+/****************************************************************/
+.documented-header {
+  border-bottom: 1px #2d2d2d;
+  background-color: #3f4657;
+}
+.documented-header a {
+  color: #82becd;
+}
+.documented-header a:hover {
+  color: #a6d1dc;
+}
+/* Body */
+/****************************************************************/
+.documented-body {
+  background-color: #82becd;
+}
+.documented-content {
+  background-color: #ffffff;
+}
+.documented-content .documented-page-header {
+  color: #82becd;
+}
+.documented-content .documented-author {
+  color: #999999;
+  font-style: italic;
+  font-weight: bold;
+}
+.documented-content .documented-date {
+  color: #999999;
+  font-style: italic;
+}
+/* Sidebar */
+/****************************************************************/
+.documented-sidebar {
+  background-color: #f7f7f7;
+  border-color: #e7e7e9;
+  /* Collapser */
+  /* Menu */
+  /* Links */
+  /* Copyright */
+}
+.documented-sidebar .documented-sidebar-collapser {
+  background-color: #ffffff;
+  border: 1px solid #82becd;
+  color: #82becd;
+}
+.documented-sidebar .documented-sidebar-collapser.collapser-active {
+  background-color: #82becd;
+  color: #ffffff;
+}
+.documented-sidebar .documented-sidebar-collapser:hover {
+  background-color: #70b5c6;
+  color: #ffffff;
+}
+.documented-sidebar .documented-sub-menu .sub-menu-title,
+.documented-sidebar .documented-sub-menu .sub-menu-title a,
+.documented-sidebar .documented-sub-menu .menu-item a {
+  color: #999999;
+}
+.documented-sidebar .documented-sub-menu .menu-item-current,
+.documented-sidebar .documented-sub-menu .menu-item-current a {
+  font-weight: bold;
+  color: #82becd;
+}
+.documented-sidebar .documented-links .documented-link-item a {
+  color: #82becd;
+}
+.documented-sidebar .documented-links .documented-link-item a:hover,
+.documented-sidebar .documented-links .documented-link-item a:active {
+  color: #a6d1dc;
+}
+.documented-sidebar .documented-copyright a {
+  color: #82becd;
+}
+.documented-sidebar .documented-copyright a:hover,
+.documented-sidebar .documented-copyright a:active {
+  color: #a6d1dc;
+}

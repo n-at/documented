@@ -1,0 +1,86 @@
+/* Header */
+/****************************************************************/
+.documented-header {
+  padding: 5px 15px;
+}
+.documented-header h1 {
+  margin: 5px 0;
+  font-size: 18px;
+}
+/* Body */
+/****************************************************************/
+.documented-body {
+  margin-left: -15px;
+}
+.documented-content-wrapper {
+  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.documented-content .documented-page-header {
+  margin-top: 10px;
+}
+.documented-content .documented-author,
+.documented-content .documented-date {
+  font-size: 12px;
+}
+.documented-content .documented-header-line {
+  margin-top: 0;
+}
+/* Sidebar */
+/****************************************************************/
+.documented-sidebar {
+  border-right: 1px solid;
+  /* Collapser */
+  /* Menu */
+  /* Copyright */
+  /* Links */
+}
+.documented-sidebar .documented-sidebar-collapser {
+  display: none;
+}
+@media (max-width: 991px) {
+  .documented-sidebar .documented-sidebar-collapser {
+    display: inline-block;
+    margin: 10px;
+  }
+  .documented-sidebar .documented-sidebar-collapsible.sidebar-collapsed {
+    display: none;
+  }
+}
+.documented-sidebar .documented-menu-wrapper {
+  padding-top: 10px;
+}
+.documented-sidebar .documented-menu-wrapper .documented-sub-menu {
+  padding-left: 20px;
+}
+.documented-sidebar .documented-menu-wrapper .documented-sub-menu .menu-item {
+  padding-bottom: 5px;
+}
+.documented-sidebar .documented-menu-wrapper .documented-sub-menu .sub-menu-title {
+  padding-bottom: 5px;
+}
+.documented-sidebar .documented-menu-wrapper .documented-sub-menu .menu-marker {
+  font-size: 1em;
+  cursor: pointer;
+}
+.documented-sidebar .documented-copyright {
+  margin-left: 20px;
+}
+.documented-sidebar .documented-links {
+  margin-left: 20px;
+}
+/* Bootstrap fixes */
+/****************************************************************/
+.img-responsive {
+  display: inline;
+}
+/* Bootstrap column fix  */
+/* http://stackoverflow.com/questions/19695784/how-can-i-make-bootstrap-columns-all-the-same-height */
+.row-height {
+  overflow: hidden;
+}
+.col-height {
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+}

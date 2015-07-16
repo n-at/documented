@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="res/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="res/highlight.js/src/styles/github.css">
+    <link rel="stylesheet" href="res/documented/css/style.css">
+    <link rel="stylesheet" href="res/documented/css/themes/teal-dark.css">
+
+    <script src="res/modernizr/modernizr.js"></script>
+    <script src="res/jquery/dist/jquery.min.js"></script>
+    <script src="res/documented/js/ui.js"></script>
+
+    <title>How to use documented - documented</title>
+</head>
+<body>
+
+
+<div class="documented-header">
+    <h1>
+    <a href="index.html">
+        documented
+    </a>
+</h1>
+
+</div>
+
+
+<div class="documented-body container-fluid">
+    <div class="row row-height">
+        <div class="col-lg-3 col-md-3 col-height documented-sidebar">
+            
+<button class="btn btn-block documented-sidebar-collapser">
+    <span class="glyphicon glyphicon-menu-hamburger"></span>
+</button>
+
+<div class="documented-sidebar-collapsible sidebar-collapsed">
+
+    
+    <div class="documented-menu">
+        
+
+<div class="documented-menu-wrapper">
+    
+    <div class="documented-sub-menu">
+        
+            <div class="sub-menu">
+                <div class="sub-menu-title ">
+                    <span class="menu-marker"></span>
+                    
+                        <a href="examples/">documented examples</a>
+                    
+                </div>
+                
+    <div class="documented-sub-menu">
+        
+            <div class="sub-menu">
+                <div class="sub-menu-title ">
+                    <span class="menu-marker"></span>
+                    
+                        <span>Second level menu</span>
+                    
+                </div>
+                
+    <div class="documented-sub-menu">
+        
+
+        
+            <div class="menu-item ">
+                <a href="examples/subsection/00_content.html">Second level example</a>
+            </div>
+        
+    </div>
+
+            </div>
+        
+
+        
+            <div class="menu-item ">
+                <a href="examples/00_markdown.html">Markdown</a>
+            </div>
+        
+            <div class="menu-item ">
+                <a href="examples/01_syntax.html">Markdown syntax</a>
+            </div>
+        
+            <div class="menu-item ">
+                <a href="examples/github_flavored.html">GitHub flavored markdown syntax extension</a>
+            </div>
+        
+    </div>
+
+            </div>
+        
+
+        
+            <div class="menu-item menu-item-current">
+                <a href="01_usage.html">How to use documented</a>
+            </div>
+        
+            <div class="menu-item ">
+                <a href="02_license.html">License</a>
+            </div>
+        
+    </div>
+
+</div>
+
+    </div>
+
+    
+    
+        <hr>
+        <div class="documented-links">
+            <div class="documented-links-list">
+    
+        <p class="documented-link-item">
+            <a href="http://github.com/n-at/documented" target="_blank">Visit GitHub repository</a>
+        </p>
+    
+        <p class="documented-link-item">
+            <a href="https://www.npmjs.com/package/documented" target="_blank">NPM package page</a>
+        </p>
+    
+</div>
+
+        </div>
+    
+
+    
+    <hr>
+    <div class="documented-copyright">
+        <p>documented is licensed under BSD</p>
+
+<p>
+    Generated with <a href="http://github.com/n-at/documented" target="_blank">documented</a>
+</p>
+
+    </div>
+
+</div>
+
+        </div>
+        <div class="col-lg-7 col-md-9 col-height documented-content">
+            <div class="documented-content-wrapper">
+    <h2 class="documented-page-header">How to use documented</h2>
+
+    <p>
+        <span class="documented-author"></span>
+        <span class="documented-date"></span>
+    </p>
+
+    <hr class="documented-header-line">
+
+    <p>Example of generated documentation you can see at <a href="http://n-at.github.io/documented">GitHub project page</a>.</p>
+<p>By default, documented will look for documentation in the <code>docs</code> directory and documentation images in the <code>docs/img</code>. 
+<a href="https://github.com/n-at/documented/tree/master/docs">Here</a> you can find some example documents. 
+documented will put generated documentation into <code>site</code> directory. You can change documentation, images and output 
+paths with commandline options.</p>
+<p>documented will process only markdown files (with <code>.md</code> extension), other will be ignored. If you want to know more 
+about markdown syntax, visit the GitHub <a href="https://help.github.com/articles/markdown-basics/">help page</a>.</p>
+<p>Each directory should contain an <code>index.md</code> file.</p>
+<p>Each document file should contain metadata section. This section contains several text lines in the <code>&lt;name&gt;:&lt;value&gt;</code> 
+format. Metadata will define document attributes:</p>
+<ul>
+<li><code>title</code>: document title (file name without extension by default)</li>
+<li><code>alias</code>: document name in the URL (file name by default)</li>
+<li><code>author</code>: document author (can be omitted)</li>
+<li><code>date</code>: document date of creation or modification (can be omitted)</li>
+</ul>
+<p>Document metadata example:</p>
+<pre><code>title: Example page
+alias: example<span class="emphasis">_page_</span>alias
+date: 21.12.2014
+<span class="header">author: John Doe
+---</span>
+</code></pre><p>Index file (<code>index.md</code>) metadata defines directory attributes:</p>
+<ul>
+<li><code>title</code>: directory name in the menu</li>
+<li><code>alias</code>: directory name in the URL (file system directory name by default)</li>
+<li><code>has_index</code>: when equals to <code>false</code>, index.html page will not be generated</li>
+</ul>
+<p>Metadata section ends with line containing only <code>---</code> (three dashes).</p>
+<p>Documentation configuration is stored in the <code>config.json</code> file inside of documentation root directory. Here you 
+can define:</p>
+<ul>
+<li><code>title</code>: the entire documentation title</li>
+<li><code>theme</code>: documentation visual theme name (theme.less file name without extension from 
+<a href="https://github.com/n-at/documented/tree/master/res/less/themes">documented built-in themes</a>)</li>
+<li><code>highlight</code>.<code>style</code>: source code highlight style name (css file name without extension from 
+<code>/components/highlight.js/src/styles/</code>)</li>
+<li><code>links</code>: custom links to include to the bottom bar</li>
+</ul>
+<p>Configuration example:</p>
+<pre><code>{
+  "<span class="attribute">title</span>": <span class="value"><span class="string">"documented"</span></span>,
+  "<span class="attribute">theme</span>": <span class="value"><span class="string">"teal-dark"</span></span>,
+  "<span class="attribute">highlight</span>": <span class="value">{
+    "<span class="attribute">style</span>": <span class="value"><span class="string">"github"</span>
+  </span>}</span>,
+  "<span class="attribute">copyright</span>": <span class="value"><span class="string">"documented is licensed under BSD"</span></span>,
+  "<span class="attribute">links</span>": <span class="value">{
+    "<span class="attribute">GitHub</span>": <span class="value"><span class="string">"http://github.com/n-at/documented"</span></span>,
+    "<span class="attribute">twitter</span>": <span class="value"><span class="string">"http://twitter.com/atnurgaliev"</span>
+  </span>}
+</span>}
+</code></pre><p>Files and directories in the result documentation menu will be sorted by their names in the filesystem (or aliases).
+It is recommended to give names (or aliases) which start with number and consist of latin letters, digits and 
+underscores. For example:</p>
+<pre><code><span class="number">00</span>_markdown<span class="class">.md</span>
+<span class="number">01</span>_syntax<span class="class">.md</span>
+<span class="number">02</span>_github.md
+</code></pre><p><strong>Note for images.</strong> Set path to image relative of images directory. For example, you have the image with name 
+<code>img.png</code> in the root of images directory. In document you can insert it with code: <code>![example image](img.png)</code>.</p>
+
+
+</div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

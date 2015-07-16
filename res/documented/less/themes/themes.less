@@ -1,0 +1,146 @@
+/* Variables */
+/****************************************************************/
+
+@body-background-color: #1c3135;
+@body-highlight-background-color: #007F7F;
+@header-background-color: @body-background-color;
+@content-background-color: #FFF;
+@sidebar-background-color: #F7F7F7;
+@pre-background-color: #FFF;
+
+@title-main-color: #007F7F;
+@title-highlight-color: lighten(@title-main-color, 10%);
+
+@secondary-text-color: #999;
+
+@inactive-menu-color: #999;
+@active-menu-color: #007F7F;
+
+@header-border-color: #2D2D2D;
+@sidebar-border-color: #E7E7E9;
+
+@link-color: @active-menu-color;
+@link-active-color: lighten(@link-color, 10%);
+
+@copyright-link-color: @link-color;
+@copyright-link-active-color: @link-active-color;
+
+@collapser-background-color: #FFF;
+@collapser-color: @title-main-color;
+@collapser-active-background-color: @collapser-color;
+@collapser-active-color: @collapser-background-color;
+@collapser-hover-background-color: darken(@collapser-active-background-color, 5%);
+@collapser-hover-color: @collapser-background-color;
+
+/* Global */
+/****************************************************************/
+
+body {
+  background-color: @body-background-color;
+}
+
+pre {
+  background-color: @pre-background-color;
+}
+
+/* Header */
+/****************************************************************/
+
+.documented-header {
+  border-bottom: 1px @header-border-color;
+  background-color: @header-background-color;
+
+  a {
+    color: @title-main-color;
+
+    &:hover {
+      color: @title-highlight-color;
+    }
+  }
+}
+
+/* Body */
+/****************************************************************/
+
+.documented-body {
+  background-color: @body-highlight-background-color;
+}
+
+.documented-content {
+  background-color: @content-background-color;
+
+  .documented-page-header {
+    color: @title-main-color;
+  }
+
+  .documented-author {
+    color: @secondary-text-color;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  .documented-date {
+    color: @secondary-text-color;
+    font-style: italic;
+  }
+}
+
+/* Sidebar */
+/****************************************************************/
+
+.documented-sidebar {
+  background-color: @sidebar-background-color;
+  border-color: @sidebar-border-color;
+
+  /* Collapser */
+  .documented-sidebar-collapser {
+    background-color: @collapser-background-color;
+    border: 1px solid @collapser-color;
+    color: @collapser-color;
+
+    &.collapser-active {
+      background-color: @collapser-active-background-color;
+      color: @collapser-active-color;
+    }
+
+    &:hover {
+      background-color: @collapser-hover-background-color;
+      color: @collapser-hover-color;
+    }
+  }
+
+  /* Menu */
+  .documented-sub-menu .sub-menu-title,
+  .documented-sub-menu .sub-menu-title a,
+  .documented-sub-menu .menu-item a {
+    color: @inactive-menu-color;
+  }
+
+  .documented-sub-menu .menu-item-current,
+  .documented-sub-menu .menu-item-current a{
+    font-weight: bold;
+    color: @active-menu-color;
+  }
+
+  /* Links */
+  .documented-links {
+    .documented-link-item a {
+      color: @link-color;
+
+      &:hover,
+      &:active {
+        color: @link-active-color;
+      }
+    }
+  }
+
+  /* Copyright */
+  .documented-copyright a{
+    color: @copyright-link-color;
+
+    &:hover,
+    &:active {
+      color: @copyright-link-active-color;
+    }
+  }
+}
