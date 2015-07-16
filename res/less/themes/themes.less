@@ -19,6 +19,12 @@
 @header-border-color: #2D2D2D;
 @sidebar-border-color: #E7E7E9;
 
+@link-color: @active-menu-color;
+@link-active-color: lighten(@link-color, 10%);
+
+@copyright-link-color: @link-color;
+@copyright-link-active-color: @link-active-color;
+
 /* Global */
 /****************************************************************/
 
@@ -90,5 +96,27 @@ pre {
   .documented-sub-menu .menu-item-current a{
     font-weight: bold;
     color: @active-menu-color;
+  }
+
+  /* Links */
+  .documented-links {
+    .documented-link-item a {
+      color: @link-color;
+
+      &:hover,
+      &:active {
+        color: @link-active-color;
+      }
+    }
+  }
+
+  /* Copyright */
+  .documented-copyright a{
+    color: @copyright-link-color;
+
+    &:hover,
+    &:active {
+      color: @copyright-link-active-color;
+    }
   }
 }
