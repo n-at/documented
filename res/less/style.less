@@ -1,17 +1,18 @@
-
 /* Header */
 /****************************************************************/
+
 .documented-header {
   padding: 5px 15px;
-}
 
-.documented-header h1 {
-  margin: 5px 0;
-  font-size: 18px;
+  h1 {
+    margin: 5px 0;
+    font-size: 18px;
+  }
 }
 
 /* Body */
 /****************************************************************/
+
 .documented-body {
   margin-left: -15px;
 }
@@ -22,67 +23,75 @@
   padding-left: 20px;
 }
 
-.documented-page-header {
-  margin-top: 10px;
-}
+.documented-content {
+  .documented-page-header {
+    margin-top: 10px;
+  }
 
-.documented-author, .documented-date {
-  font-size: 12px;
-}
+  .documented-author,
+  .documented-date {
+    font-size: 12px;
+  }
 
-.documented-header-line {
-  margin-top: 0;
+  .documented-header-line {
+    margin-top: 0;
+  }
 }
 
 /* Sidebar */
+/****************************************************************/
+
 .documented-sidebar {
   border-right: 1px solid;
-}
 
-.documented-sidebar-collapser {
-  margin: 10px 0 10px 15px;
-  display: none;
-}
-
-@media (max-width: 991px) {
+  /* Collapser */
   .documented-sidebar-collapser {
-    display: inline;
-  }
-
-  .documented-sidebar-collapsible.sidebar-collapsed {
+    margin: 10px 0 10px 15px;
     display: none;
   }
-}
 
-/* Copyright */
-.documented-copyright {
-  margin-left: 20px;
-}
+  @media (max-width: 991px) {
+    .documented-sidebar-collapser {
+      display: inline;
+    }
 
-/* Menu */
-.documented-menu-wrapper {
-  padding-top: 10px;
-}
+    .documented-sidebar-collapsible.sidebar-collapsed {
+      display: none;
+    }
+  }
 
-.documented-sub-menu {
-  padding-left: 20px;
-}
+  /* Menu */
+  .documented-menu-wrapper {
+    padding-top: 10px;
+    display: none;
 
-.documented-menu-wrapper {
-  display: none;
-}
+    .documented-sub-menu {
+      padding-left: 20px;
 
-.documented-sub-menu .menu-item {
-  padding-bottom: 5px;
-}
+      .menu-item {
+        padding-bottom: 5px;
+      }
 
-.documented-sub-menu .sub-menu-title {
-  padding-bottom: 5px;
-}
+      .sub-menu-title {
+        padding-bottom: 5px;
+      }
 
-.documented-sub-menu .menu-marker {
-  font-size: 1em;
-  cursor: pointer;
+      .menu-marker {
+         font-size: 1em;
+         cursor: pointer;
+      }
+    }
+  }
+
+  /* Copyright */
+  .documented-copyright {
+    margin-left: 20px;
+  }
+
+  /* Links */
+  .documented-links {
+    margin-left: 20px;
+  }
 }
 
 /* Bootstrap fixes */
