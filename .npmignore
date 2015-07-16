@@ -9,3 +9,6 @@ bower.json
 /.idea
 /.git
 .gitignore
+
+# LESS sources
+/res/less

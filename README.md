@@ -99,8 +99,8 @@ Documentation configuration is stored in the `config.json` file inside of docume
 can define:
  
 * `title`: the entire documentation title
-* `theme`: documentation visual theme name (css file name without extension from 
-  [documented built-in themes](https://github.com/n-at/documented/tree/master/res/themes))
+* `theme`: documentation visual theme name (theme.less file name without extension from 
+  [documented built-in themes](https://github.com/n-at/documented/tree/master/res/less/themes))
 * `highlight`.`style`: source code highlight style name (css file name without extension from 
   `/components/highlight.js/src/styles/`)
 * `links`: custom links to include to the bottom bar
