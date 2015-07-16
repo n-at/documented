@@ -11,14 +11,23 @@
         sidebarCollapserBinding();
     });
 
+    /**
+     * Prettify tables with bootstrap class
+     */
     function styleTables() {
         $('.documented-content table').addClass('table');
     }
 
+    /**
+     * Make images responsive
+     */
     function responsiveImages() {
         $('.documented-content img').addClass('img-responsive');
     }
 
+    /**
+     * Menu actions binding
+     */
     function setupMenu() {
         var $menuWrapper = $('.documented-menu-wrapper');
         var $subMenuTitles = $menuWrapper.find('.sub-menu-title');
@@ -55,13 +64,14 @@
             toggleIcon($this);
             $this.parent().siblings('.documented-sub-menu').slideToggle();
         });
-
-        $menuWrapper.show();
     }
 
     function sidebarCollapserBinding() {
-        $('.documented-sidebar-collapser').click(function() {
+        var $collapser = $('.documented-sidebar-collapser');
+
+        $collapser.click(function() {
             $('.documented-sidebar-collapsible').toggleClass('sidebar-collapsed');
+            $collapser.toggleClass('collapser-active');
         });
     }
 

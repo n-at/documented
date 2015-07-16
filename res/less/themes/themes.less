@@ -25,6 +25,13 @@
 @copyright-link-color: @link-color;
 @copyright-link-active-color: @link-active-color;
 
+@collapser-background-color: #FFF;
+@collapser-color: @title-main-color;
+@collapser-active-background-color: @collapser-color;
+@collapser-active-color: @collapser-background-color;
+@collapser-hover-background-color: darken(@collapser-active-background-color, 5%);
+@collapser-hover-color: @collapser-background-color;
+
 /* Global */
 /****************************************************************/
 
@@ -84,6 +91,23 @@ pre {
 .documented-sidebar {
   background-color: @sidebar-background-color;
   border-color: @sidebar-border-color;
+
+  /* Collapser */
+  .documented-sidebar-collapser {
+    background-color: @collapser-background-color;
+    border: 1px solid @collapser-color;
+    color: @collapser-color;
+
+    &.collapser-active {
+      background-color: @collapser-active-background-color;
+      color: @collapser-active-color;
+    }
+
+    &:hover {
+      background-color: @collapser-hover-background-color;
+      color: @collapser-hover-color;
+    }
+  }
 
   /* Menu */
   .documented-sub-menu .sub-menu-title,
