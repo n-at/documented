@@ -1,7 +1,7 @@
 (function() {
 
-    var ICON_OPENED = 'glyphicon-minus';
-    var ICON_CLOSED = 'glyphicon-plus';
+    var ICON_OPENED = 'glyphicon-menu-down';
+    var ICON_CLOSED = 'glyphicon-menu-right';
 
     $(function() {
         styleTables();
