@@ -165,10 +165,10 @@ about markdown syntax, visit the GitHub <a href="https://help.github.com/article
 <p>Each document file should contain metadata section. This section contains several text lines in the <code>&lt;name&gt;:&lt;value&gt;</code> 
 format. Metadata will define document attributes:</p>
 <ul>
-<li><code>title</code>: document title (file name without extension by default)</li>
-<li><code>alias</code>: document name in the URL (file name by default)</li>
-<li><code>author</code>: document author (can be omitted)</li>
-<li><code>date</code>: document date of creation or modification (can be omitted)</li>
+<li><code>title</code>: title (file name without extension by default)</li>
+<li><code>alias</code>: name in the URL (file name by default)</li>
+<li><code>author</code>: author (can be omitted)</li>
+<li><code>date</code>: date of creation or modification (can be omitted)</li>
 </ul>
 <p>Document metadata example:</p>
 <pre><code>title: Example page
@@ -178,8 +178,8 @@ date: 21.12.2014
 ---</span>
 </code></pre><p>Index file (<code>index.md</code>) metadata defines directory attributes:</p>
 <ul>
-<li><code>title</code>: directory name in the menu</li>
-<li><code>alias</code>: directory name in the URL (file system directory name by default)</li>
+<li><code>title</code>: name in the menu</li>
+<li><code>alias</code>: name in the URL (file system directory name by default)</li>
 <li><code>has_index</code>: when equals to <code>false</code>, index.html page will not be generated</li>
 </ul>
 <p>Metadata section ends with line containing only <code>---</code> (three dashes).</p>
@@ -202,8 +202,8 @@ can define:</p>
   </span>}</span>,
   "<span class="attribute">copyright</span>": <span class="value"><span class="string">"documented is licensed under BSD"</span></span>,
   "<span class="attribute">links</span>": <span class="value">{
-    "<span class="attribute">GitHub</span>": <span class="value"><span class="string">"http://github.com/n-at/documented"</span></span>,
-    "<span class="attribute">twitter</span>": <span class="value"><span class="string">"http://twitter.com/atnurgaliev"</span>
+      "<span class="attribute">Visit GitHub repository</span>": <span class="value"><span class="string">"http://github.com/n-at/documented"</span></span>,
+      "<span class="attribute">NPM package page</span>": <span class="value"><span class="string">"https://www.npmjs.com/package/documented"</span>
   </span>}
 </span>}
 </code></pre><p>Files and directories in the result documentation menu will be sorted by their names in the filesystem (or aliases).
