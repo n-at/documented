@@ -9,41 +9,36 @@ _Simple documentation generator inspired by [daux.io](http://daux.io) and [jekyl
 
 ## Installation
 
-documented requires [node.js with npm](http://nodejs.org). 
+documented requires only [node.js with npm](http://nodejs.org). 
 
 ### From npm
 
-Best option is installation from [npm](https://www.npmjs.com/). Run in shell:
+Best option is installation from [npm](https://www.npmjs.com/). Just run in shell:
 
     $ npm install documented -g
     
-documented will be available in shell as
-
-    $ documented
-    
 ### From GitHub
 
-Also you can install documented from GitHub. 
-
-You need [git](http://git-scm.com/) and [bower](http://bower.io/).
+You can install documented from GitHub. In this case you will also need [git](http://git-scm.com/) 
+and [bower](http://bower.io/) installed.
 
 Clone repository:
 
     $ git clone https://github.com/n-at/documented.git
     $ cd documented
  
-Install code dependencies:
+Install dependencies:
 
     $ npm install
     $ bower install
     
-documented can be run from code directory:
+Run documented:
  
     $ node documented
     
 ## Usage
 
-To view available options, run:
+To view all available options, run:
 
     $ documented
 
@@ -74,10 +69,10 @@ Each directory should contain an `index.md` file.
 Each document file should contain metadata section. This section contains several text lines in the `<name>:<value>` 
 format. Metadata will define document attributes:
 
-* `title`: document title (file name without extension by default)
-* `alias`: document name in the URL (file name by default)
-* `author`: document author (can be omitted)
-* `date`: document date of creation or modification (can be omitted)
+* `title`: title (file name without extension by default)
+* `alias`: name in the URL (file name by default)
+* `author`: author (can be omitted)
+* `date`: date of creation or modification (can be omitted)
 
 Document metadata example:
 
@@ -89,8 +84,8 @@ Document metadata example:
 
 Index file (`index.md`) metadata defines directory attributes:
  
-* `title`: directory name in the menu
-* `alias`: directory name in the URL (file system directory name by default)
+* `title`: name in the menu
+* `alias`: name in the URL (file system directory name by default)
 * `has_index`: when equals to `false`, index.html page will not be generated
   
 Metadata section ends with line containing only `---` (three dashes).
@@ -115,8 +110,8 @@ Configuration example:
       },
       "copyright": "documented is licensed under BSD",
       "links": {
-        "GitHub": "http://github.com/n-at/documented",
-        "twitter": "http://twitter.com/atnurgaliev"
+          "Visit GitHub repository": "http://github.com/n-at/documented",
+          "NPM package page": "https://www.npmjs.com/package/documented"
       }
     }
 
