@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="res/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="res/highlight.js/src/styles/github.css">
+    <link rel="stylesheet" href="res/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="res/highlight.js/styles/github.css">
     <link rel="stylesheet" href="res/documented/css/style.css">
     <link rel="stylesheet" href="res/documented/css/themes/teal-dark.css">
 
     <script src="res/modernizr/modernizr.js"></script>
-    <script src="res/jquery/dist/jquery.min.js"></script>
+    <script src="res/jquery/jquery.min.js"></script>
     <script src="res/documented/js/ui.js"></script>
 
     <title>How to use documented - documented</title>
@@ -172,9 +172,9 @@ format. Metadata will define document attributes:</p>
 </ul>
 <p>Document metadata example:</p>
 <pre><code>title: Example page
-alias: example<span class="emphasis">_page_</span>alias
+alias: example<span class="hljs-emphasis">_page_</span>alias
 date: 21.12.2014
-<span class="header">author: John Doe
+<span class="hljs-header">author: John Doe
 ---</span>
 </code></pre><p>Index file (<code>index.md</code>) metadata defines directory attributes:</p>
 <ul>
@@ -195,23 +195,23 @@ can define:</p>
 </ul>
 <p>Configuration example:</p>
 <pre><code>{
-  "<span class="attribute">title</span>": <span class="value"><span class="string">"documented"</span></span>,
-  "<span class="attribute">theme</span>": <span class="value"><span class="string">"teal-dark"</span></span>,
-  "<span class="attribute">highlight</span>": <span class="value">{
-    "<span class="attribute">style</span>": <span class="value"><span class="string">"github"</span>
+  "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"documented"</span></span>,
+  "<span class="hljs-attribute">theme</span>": <span class="hljs-value"><span class="hljs-string">"teal-dark"</span></span>,
+  "<span class="hljs-attribute">highlight</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">style</span>": <span class="hljs-value"><span class="hljs-string">"github"</span>
   </span>}</span>,
-  "<span class="attribute">copyright</span>": <span class="value"><span class="string">"documented is licensed under BSD"</span></span>,
-  "<span class="attribute">links</span>": <span class="value">{
-      "<span class="attribute">Visit GitHub repository</span>": <span class="value"><span class="string">"http://github.com/n-at/documented"</span></span>,
-      "<span class="attribute">NPM package page</span>": <span class="value"><span class="string">"https://www.npmjs.com/package/documented"</span>
+  "<span class="hljs-attribute">copyright</span>": <span class="hljs-value"><span class="hljs-string">"documented is licensed under BSD"</span></span>,
+  "<span class="hljs-attribute">links</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">Visit GitHub repository</span>": <span class="hljs-value"><span class="hljs-string">"http://github.com/n-at/documented"</span></span>,
+      "<span class="hljs-attribute">NPM package page</span>": <span class="hljs-value"><span class="hljs-string">"https://www.npmjs.com/package/documented"</span>
   </span>}
 </span>}
 </code></pre><p>Files and directories in the result documentation menu will be sorted by their names in the filesystem (or aliases).
 It is recommended to give names (or aliases) which start with number and consist of latin letters, digits and 
 underscores. For example:</p>
-<pre><code><span class="number">00</span>_markdown<span class="class">.md</span>
-<span class="number">01</span>_syntax<span class="class">.md</span>
-<span class="number">02</span>_github.md
+<pre><code><span class="hljs-number">00</span>_markdown<span class="hljs-class">.md</span>
+<span class="hljs-number">01</span>_syntax<span class="hljs-class">.md</span>
+<span class="hljs-number">02</span>_github.md
 </code></pre><p><strong>Note for images.</strong> Set path to image relative of images directory. For example, you have the image with name 
 <code>img.png</code> in the root of images directory. In document you can insert it with code: <code>![example image](img.png)</code>.</p>
 
