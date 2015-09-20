@@ -1,6 +1,6 @@
 {
   "name": "documented",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Simple documentation generator",
   "main": "documented.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "deepcopy": "0.3.*",
     "express": "4.10.*",
     "fs-extra": "0.13.*",
-    "highlight.js": "8.4.*",
+    "highlight.js": "8.8.*",
     "marked": "0.3.*",
     "nconf": "0.7.*",
     "node-uuid": "1.4.*",
